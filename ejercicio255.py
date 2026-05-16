@@ -24,8 +24,8 @@ while True:
             print("Debe ingresar un  usuario antes de iniciar sesión")
             continue
         
-        usuario = input("Ingrese usuario")
-        contrseña = input("Ingrese contraseña")
+        usuario = input("Ingrese usuario: ")
+        contrseña = input("Ingrese contraseña: ")
         if (usuario == usuario1 and contrseña == contraseña1) or (usuario == usuario2 and contrseña == contraseña2) or (usuario == usuario3 and contrseña == contraseña3): 
             print("Inicio de sesion correcto!")
 
@@ -41,9 +41,9 @@ while True:
                     print("ERROR!, Debe ingresar un número!")
                     continue
 
-                if op == 1:
-                    celular = input("Ingrese el numero del celular (9 Digitos, que comience con 9): ")
-                    if len(celular) == 9 and celular.startswith(9) and celular.isdigit():
+                if op == 1: #PRUEBA
+                    celular = (input("Ingrese el numero del celular (9 Digitos, que comience con 9): "))
+                    if len(celular) == 9 and celular.startswith("9") and celular.isdigit():
                         print("Llamando al celular: ",celular)
                     else:
                         print("ERROR!, Numero no es correcto.")
@@ -65,13 +65,14 @@ while True:
                 elif op == 3:
                     print("Saliendo..")
                     break
-
+        else:
+            print("Nombre de usuario o contraseña no valido.")
         
 
     elif opcion == 2:
         print("Registro usuario")
-        nuevoUsuario = input("Ingrese nuevo usuario")
-        nuevaContraseña = input("Ingrese nueva contraseña")
+        nuevoUsuario = input("Ingrese nuevo usuario: ")
+        nuevaContraseña = input("Ingrese nueva contraseña: ")
 
         if usuario1 == None:
             usuario1 = nuevoUsuario
